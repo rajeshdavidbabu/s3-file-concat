@@ -1,0 +1,58 @@
+{
+  "name": "s3-file-concat",
+  "version": "1.0.1",
+  "description": "Minimal library to concatenate S3 files of different data-types.",
+  "main": "lib/index.js",
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "keywords": [
+    "AWS",
+    "S3",
+    "append",
+    "S3",
+    "concat",
+    "concatenate",
+    "utility",
+    "Amazon Web Services",
+    "CSV",
+    "DOC",
+    "text",
+    "plain",
+    "JSON",
+    "string",
+    "object",
+    "merge",
+    "upload",
+    "S3",
+    "Files",
+    "S3",
+    "File",
+    "append",
+    "files",
+    "concatenate",
+    "files"
+  ],
+  "author": "Rajesh Babu <sammydave.e@gmail.com>",
+  "license": "MIT",
+  "files": [
+    "lib/",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rajeshdavidbabu/s3-file-concat.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rajeshdavidbabu/s3-file-concat/issues"
+  },
+  "homepage": "https://github.com/rajeshdavidbabu/s3-file-concat#readme",
+  "dependencies": {
+    "aws-sdk": "^2.422.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.15.2",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0"
+  }
+}
