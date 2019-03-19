@@ -1,7 +1,7 @@
 # S3 File Concat  
   
 
-Minimal javascript library to concatenate/merge/append **AWS S3** files of different data-types.  
+Minimal javascript library to concatenate/merge/append **AWS S3** files of different data-types. 📦🔗📤 
 <p>
   <a href="https://github.com/rajeshdavidbabu/Node-Clone-S3-Bucket/blob/master/LICENSE">
     <img src="https://img.shields.io/npm/l/express.svg" alt="license" height="18">
