@@ -29,6 +29,8 @@ This can append all the text-based files that support **utf-8 format** and also 
 
 ## How does it handle different data-types?  
 
+The library makes use of **JSON.parse API**, which would parse all object based data-types and throws for strings. The data returned from the api is sanitized, and the output is either concatenated or merged.
+
 - Files containing large lists of strings/number/utf8 char codes are  
 ***concatenated***.  
 - Files containing large arrays (of strings and objects) are  
