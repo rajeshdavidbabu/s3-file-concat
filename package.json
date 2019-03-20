@@ -1,6 +1,6 @@
 {
   "name": "s3-file-concat",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Minimal library to concatenate S3 files of different data-types.",
   "main": "lib/index.js",
   "scripts": {
