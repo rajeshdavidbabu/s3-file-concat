@@ -13,7 +13,7 @@ Minimal javascript library to concatenate/merge/append **AWS S3** files of diffe
 
 ## Why?  
 
-If you are already using **S3**, you would know that the files are immutable in S3. Meaning you cannot edit or modify the contents of a file. Instead, you can only create a new one. Out of its many use-cases, S3 is prevalently used for dumping small to large data files/logs. ***Let's assume that you want to append all the data files inside a folder into one file, you cannot do it with an S3 API.*** That's where this minimal library comes into the picture.  
+If you are already using **S3**, you would know that the files are immutable in S3. Meaning you cannot edit or modify the contents of a file. Instead, you can only create a new file. Out of its many use-cases, S3 is prevalently used for dumping small to large data files/logs. ***Let's assume that you want to append all the data files inside a folder into one file, you cannot do it with an S3 API.*** That's where this minimal library comes into the picture.  
   
 
 ## Files ?? What kind of files can you append/concatenate?  
@@ -29,7 +29,7 @@ This can append all the text-based files that support **utf-8 format** and also 
 
 ## How does it handle different data-types?  
 
-The library makes use of **JSON.parse API**, which would parse all object based data-types and throws for strings. The data returned from the api is sanitized, and the output is either concatenated or merged.
+The library makes use of **JSON.parse API**, which would parse all object based data-types and throws for strings. The data returned from the API is sanitized, and the output is either concatenated or merged.
 
 - Files containing large lists of strings/number/utf8 char codes are  
 ***concatenated***.  
@@ -39,10 +39,10 @@ The library makes use of **JSON.parse API**, which would parse all object based 
 ***merged*** instead (the last file overrides all the other keys).  
   
 
-**Important Note:**  *Merging two files of different data-types will result in an error. Eg: you cannot merge a file containing a string and a file containing an object.*  
+**Important Note:**  *Merging two files of different data-types will result in an error. Eg: you cannot merge a text file and a JSON consisting only an array/object. That's assumed to be a wrong kind of concatenation/merge.*  
   
 
-## Requirments  
+## Requirements  
 
 - Node version (8.9.1) and above.  
 - AWS-SDK.  
@@ -147,7 +147,7 @@ s3FileConcat.concatFiles(keys,  {
 ```  
   
 
-*P.S: If the readbility is not great, please check the [example](https://github.com/rajeshdavidbabu/s3-file-concat/tree/master/example) folder.*  
+*P.S: If the readability is not great, please check the [example](https://github.com/rajeshdavidbabu/s3-file-concat/tree/master/example) folder.*  
   
 
 ## Example Usage  
@@ -157,7 +157,7 @@ If the usage above is not clear, fear not. I have made a detailed usage scenario
 
 ## Testing  
 
-Currently, the testing setup is still pending, but as part of the manual testing process for different file types have been tested with the following test data present inside the examples folder. The test data consists of the the known possible file types user would like to append/concatenate/merge, the resulting appended file is also part of it.
+Currently, the testing setup is still pending, but as part of the manual testing process for different file types have been tested with the following test data present inside the examples folder. The test data consists of the known possible file types user would like to append/concatenate/merge, the resulting appended file is also part of it.
   
 
 This is my test data and the library handled. However, if you are really interested in testing its behaviour. Upload the [s3BucketTestFiles](https://github.com/rajeshdavidbabu/s3-file-concat/tree/master/example/s3BucketTestFiles) to your target bucket and run the [example/index.js](https://github.com/rajeshdavidbabu/s3-file-concat/blob/master/example/index.js) with valid aws config. Be sure to read the code comments there !!
