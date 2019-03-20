@@ -79,28 +79,75 @@ const  {  concatFiles  }  =  S3FileConcat({
 /** concatFiles method accepts two arguments and returns a promise.  
 1) Keys of the S3 files we want to concatenate/append/merge.  
 2) Options (optional object):  
-i) targetFileKey: "<mybucket/myfolder/myConcatendatedFile>" // target filekey to be update the file with the concatenated content, defaulted to empty string.  
-ii) deleteSourceFiles: '<true or false>' // delete the source files after concatenation/merging. defaulted to false.  
-*/  
+i) targetFileKey: "<mybucket/myfolder/myConcatendatedFile>"
+ii) deleteSourceFiles: '<true or false>' // defaulted to false.  
+*/
+
+// Appending arrays files
+let keys = [
+  'testdata/arrays/array1.json',
+  'testdata/arrays/array2.json',
+  'testdata/arrays/array3.json'
+];
+// this creates a new file on s3 with appended content.
+let targetFileKey = 'testdata/arrays/array_append.json';
+
+// Appending CSV files
+keys = [
+  'testdata/csv_files/csv1.csv',
+  'testdata/csv_files/csv2.csv',
+  'testdata/csv_files/csv3.csv'
+];
+targetFileKey = 'testdata/csv_files/csv_append.csv';
+
+// Appending doc files
+keys = [
+  'testdata/doc_files/doc1.doc',
+  'testdata/doc_files/doc2.doc',
+  'testdata/doc_files/doc3.doc'
+];
+targetFileKey = 'testdata/doc_files/doc_append.doc';
+
+// Merging objects files
+keys = [
+  'testdata/objects/object1.json',
+  'testdata/objects/object2.json',
+  'testdata/objects/object3.json'
+];
+targetFileKey = 'testdata/objects/object_append.json';
+
+// Appending plain files
+keys = [
+  'testdata/plain/plain1',
+  'testdata/plain/plain2',
+  'testdata/plain/plain3'
+];
+targetFileKey = 'testdata/plain/plain_append';
+
+// Appending txt files
+keys = [
+  'testdata/txt_files/file1.txt',
+  'testdata/txt_files/file2.txt',
+  'testdata/txt_files/file3.txt',
+  'testdata/txt_files/file4.txt'
+];
+targetFileKey = 'testdata/txt_files/file_append.txt';
   
-const  keys  =  [  
-  'myFolder/myFile1.txt'.  
-  'myFolder/myFile2.txt',  
-  'myFolder/myFile3.txt'  
-];  
-const  targetFileKey  =  'myOtherFolder/appendedFile.txt';  // this create a new file or overwrite the existing file with the appended content.  
-  
-// Note: when targetFileKey is empty, then we assume that the user wants to use the appended/merged data and return him appended/merged data in the promise resolve.  
+// Note: when targetFileKey is empty, then we assume that 
+// the user wants to use the appended/merged data and 
+// return him appended/merged data in the promise resolve.  
   
 s3FileConcat.concatFiles(keys,  {  
   targetFileKey  
-})  
-.then(output  =>  console.log('All done ',  output))  // output is undefined here, because we pass a targetFileKey to update, its ideal to always pass a targetFileKey if not there is a large file waiting in memory.  
+})
+// when no options are passed output consists of the appended
+// file contents, sometimes a  huge dataset waiting to be used.  
+.then(output  =>  console.log('All done ',  output)) 
 .catch(error  =>  console.log('error occured oops ',  error));  
 ```  
   
 
-*P.S: If the readbility is not great, please check the ./example folder.*  
+*P.S: If the readbility is not great, please check the [example](https://github.com/rajeshdavidbabu/s3-file-concat/tree/master/example) folder.*  
   
 
 ## Example Usage  
