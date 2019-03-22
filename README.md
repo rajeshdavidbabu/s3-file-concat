@@ -9,6 +9,9 @@ Minimal javascript library to concatenate/merge/append **AWS S3** files of diffe
   <a href="https://badge.fury.io/js/s3-file-concat">
     <img src="https://badge.fury.io/js/s3-file-concat.svg" alt="npm version" height="18">
   </a>
+  <a href="https://travis-ci.com/rajeshdavidbabu/s3-file-concat">
+    <img src="https://travis-ci.com/rajeshdavidbabu/s3-file-concat.svg?branch=master" alt="travis build">
+  </a>
 </p>
 
 ## Why?  
