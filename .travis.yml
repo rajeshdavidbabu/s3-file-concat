@@ -1,0 +1,12 @@
+language: node_js
+branches:
+  only:
+    - master
+    - /^greenkeeper/.*$/
+cache:
+  npm: true
+  directories:
+    - node_modules
+node_js:
+  - "10"
+  - "8"
