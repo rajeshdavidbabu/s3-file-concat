@@ -12,6 +12,9 @@ Minimal javascript library to concatenate/merge/append **AWS S3** files of diffe
   <a href="https://travis-ci.com/rajeshdavidbabu/s3-file-concat">
     <img src="https://travis-ci.com/rajeshdavidbabu/s3-file-concat.svg?branch=master" alt="travis build">
   </a>
+  <a href="https://bundlephobia.com/result?p=s3-file-concat">
+    <img src="https://badgen.net/bundlephobia/min/s3-file-concat" alt="size">
+  </a>
 </p>
 
 ## Why?  
