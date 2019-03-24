@@ -4,7 +4,8 @@
   "description": "Minimal library to concatenate S3 files of different data-types.",
   "main": "lib/index.js",
   "scripts": {
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "test": "jest"
   },
   "keywords": [
     "AWS",
@@ -51,8 +52,10 @@
     "aws-sdk": "^2.422.0"
   },
   "devDependencies": {
+    "aws-sdk-mock": "^4.3.1",
     "eslint": "^5.15.2",
     "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-plugin-import": "^2.16.0"
+    "eslint-plugin-import": "^2.16.0",
+    "jest": "^24.5.0"
   }
 }
