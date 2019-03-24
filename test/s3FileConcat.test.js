@@ -12,14 +12,14 @@ let targetFileKey = '';
 let concatFiles = () => {};
 
 // applies to all tests in this file
-beforeAll(() =>  {
+beforeAll(() => {
   S3.mock();
-  concatFiles = S3FileConcat({
+  ({ concatFiles } = S3FileConcat({
     accessKeyId: '1234556789',
     secretAccessKey: '12455678990',
     region: 'eu-west-1',
     bucket: 'my_bucket'
-  }).concatFiles;
+  }));
 });
 afterAll(() => S3.restore());
 

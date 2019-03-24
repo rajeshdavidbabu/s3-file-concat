@@ -6,12 +6,12 @@ const AWS = require('aws-sdk-mock');
 const fileOps = require('./fileOps');
 
 module.exports = {
-  
+
   mock() {
     AWS.mock('S3', 'getObject', (params, callback) => {
-      callback(null,  { Body: Buffer.from(fileOps.readFileSync(params.Key)) });
+      callback(null, { Body: Buffer.from(fileOps.readFileSync(params.Key)) });
     });
-  }, 
+  },
 
   restore() {
     AWS.restore();
