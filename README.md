@@ -18,6 +18,7 @@ Minimal javascript library to concatenate/merge/append **AWS S3** files of diffe
   <a href="https://www.npmjs.com/package/s3-file-concat">
     <img src="https://img.shields.io/npm/dt/s3-file-concat.svg" alt="downloads total">
   </a>
+  [![Coverage Status](https://coveralls.io/repos/github/rajeshdavidbabu/s3-file-concat/badge.svg?branch=master)](https://coveralls.io/github/rajeshdavidbabu/s3-file-concat?branch=master)
 </p>
 
 ## Why?  
