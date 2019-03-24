@@ -140,4 +140,3 @@ describe('concatenate all txt files into one txt file', () => {
     });
   });
 });
-
