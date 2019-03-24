@@ -178,7 +178,7 @@ The AWS test data is present here, at [s3BucketTestFiles](https://github.com/raj
   
 
 ## Roadmap  
-- 100% code coverage
+- 100% code coverage.
 - Support legacy versions.  
   
 
