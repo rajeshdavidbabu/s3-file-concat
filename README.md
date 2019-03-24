@@ -166,16 +166,16 @@ If the usage above is not clear, fear not. I have made a detailed usage scenario
 
 ## Testing  
 
-Currently, the testing setup is still pending, but as part of the manual testing process for different file types have been tested with the following test data present inside the examples folder. The test data consists of the known possible file types user would like to append/concatenate/merge, the resulting appended file is also part of it.
-  
+- Jest
+- aws-sdk-mock
 
-This is my test data and the library handled. However, if you are really interested in testing its behaviour. Upload the [s3BucketTestFiles](https://github.com/rajeshdavidbabu/s3-file-concat/tree/master/example/s3BucketTestFiles) to your target bucket and run the [example/index.js](https://github.com/rajeshdavidbabu/s3-file-concat/blob/master/example/index.js) with valid aws config. Be sure to read the code comments there !!
+Unit tests are implemented using [Jest](https://jest-bot.github.io/jest/), test-cases for concatenating/merging all types of files are covered. Since AWS S3 requires a network operation, they are mocked to buffer our local test-data. You can safely assume that these files are present on the server.
+
+The AWS test data is present here, at [s3BucketTestFiles](https://github.com/rajeshdavidbabu/s3-file-concat/tree/master/test/s3BucketTestFiles).
   
 
 ## Roadmap  
 
-- Writing tests.  
-- Fix known issues.  
 - Support legacy versions.  
   
 

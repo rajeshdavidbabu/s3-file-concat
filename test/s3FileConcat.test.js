@@ -6,7 +6,7 @@ const S3FileConcat = require('../lib/index');
 const S3 = require('./helpers/s3');
 const fileOps = require('./helpers/fileOps');
 
-// keys and targetKey
+// init variables
 let keys = [];
 let targetFileKey = '';
 let concatFiles = () => {};
@@ -27,6 +27,7 @@ describe('concatenate all given arrays into one array', () => {
   // applies only to tests in this describe block
   beforeEach(() => {
     keys = [
+      // the Keys of the file present on S3
       's3BucketTestFiles/arrays/array1.json',
       's3BucketTestFiles/arrays/array2.json',
       's3BucketTestFiles/arrays/array3.json'
