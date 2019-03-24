@@ -172,7 +172,7 @@ If the usage above is not clear, fear not. I have made a detailed usage scenario
 - Jest
 - aws-sdk-mock
 
-Unit tests are implemented using [Jest](https://jest-bot.github.io/jest/), test-cases for concatenating/merging all types of files are covered. Since AWS S3 requires a network operation, they are mocked to buffer our local test-data. You can safely assume that these files are present on the server.
+Unit tests are implemented using [Jest](https://jest-bot.github.io/jest/), test-cases for concatenating/merging all types of files are covered. Since AWS S3 requires a network operation, they are mocked to buffer our local test-data. You can safely assume that the test data files are present on your target AWS S3 Bucket.
 
 The AWS test data is present here, at [s3BucketTestFiles](https://github.com/rajeshdavidbabu/s3-file-concat/tree/master/test/s3BucketTestFiles).
   
